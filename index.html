@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Aéreo</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar-content">
+        <h1>Dashboard Aéreo</h1>
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+    </div>
+    <p>Visão geral de viagens e rotas</p>
+</header>
+
+<main class="dashboard">
+
+    <section class="filters">
+        <label for="period">Período</label>
+        <select id="period">
+            <option value="6">Últimos 6 meses</option>
+            <option value="12">Últimos 12 meses</option>
+        </select>
+    </section>
+
+    <section class="loading" id="loading">Carregando dados...</section>
+
+    <section class="kpis hidden" id="kpis">
+        <div class="card">
+            <h3>Voos Totais</h3>
+            <span id="totalFlights">0</span>
+        </div>
+        <div class="card">
+            <h3>Passageiros</h3>
+            <span id="totalPassengers">0</span>
+        </div>
+        <div class="card">
+            <h3>Rotas Ativas</h3>
+            <span id="totalRoutes">0</span>
+        </div>
+    </section>
+
+    <section class="charts hidden" id="charts">
+        <div class="chart-box">
+            <h3>Voos por Mês</h3>
+            <canvas id="flightsChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <h3>Rotas Mais Utilizadas</h3>
+            <canvas id="routesChart"></canvas>
+        </div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
