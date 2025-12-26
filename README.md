@@ -1,4 +1,4 @@
-# Dashboard-Aereo
+# Dashboard-Aereo-interativo
 # ✈️ Dashboard Aéreo Interativo
 
 Dashboard web interativo desenvolvido com HTML, CSS e JavaScript puro, focado em visualização de dados de viagens aéreas.
